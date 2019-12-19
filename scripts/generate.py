@@ -6,7 +6,7 @@ os.mkdir("dist")
 with open("current_page") as fp:
 	page = fp.read()
 
-with open("template.html") as fp:
+with open("scripts/template.html") as fp:
 	template = Template(fp.read())
 
 with open("dist/index.html", "w") as fp:
