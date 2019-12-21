@@ -27,5 +27,15 @@
   <body>
     <iframe src="https://zsk.poznan.pl/
 "></iframe>
+    <script>
+      const current = "4c8eaa24bb659edfc9d81d03b5da8c1635c97cde";
+      setInterval(() => {
+        fetch(`${window.location}/head`)
+          .then(r => r.text())
+          .then(head =>
+            head === current ? null : window.location.reload(true)
+          );
+      }, 30000);
+    </script>
   </body>
 </html>
