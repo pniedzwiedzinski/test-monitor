@@ -28,9 +28,9 @@
     <iframe src="https://get-lucky.netlify.com/
 "></iframe>
     <script>
-      const current = "85f3a083a7103dc20d5cb8640967b0bcf36b81d8";
+      const current = "f2d91b4016c97d61abc27dbe3adb8e567e93b282";
       setInterval(() => {
-        fetch(`${window.location}/head`)
+        fetch(`${window.location}/head`, { cache: "no-cache" })
           .then(r => r.text())
           .then(head =>
             head === current ? null : window.location.reload(true)
