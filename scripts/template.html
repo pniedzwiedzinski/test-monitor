@@ -26,5 +26,15 @@
   </head>
   <body>
     <iframe src="{{ page }}"></iframe>
+    <script>
+      const current = "{{ head }}";
+      setInterval(() => {
+        fetch(`${window.location}/head`)
+          .then(r => r.text())
+          .then(head =>
+            head === current ? null : window.location.reload(true)
+          );
+      }, 30000);
+    </script>
   </body>
 </html>
