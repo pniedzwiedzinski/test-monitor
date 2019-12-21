@@ -29,7 +29,7 @@
     <script>
       const current = "{{ head }}";
       setInterval(() => {
-        fetch(`${window.location}/head`)
+        fetch(`${window.location}/head`, { cache: "no-cache" })
           .then(r => r.text())
           .then(head =>
             head === current ? null : window.location.reload(true)
