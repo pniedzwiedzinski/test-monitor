@@ -12,12 +12,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+      
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1
+      
+    - uses: actions/cache@v1
+      id: pip-cache
+      with:
+        path: ~/.cache/pip
+        key: pip
+        restore-keys: |
+          pip
+          
     - name: Install dependencies
+      if: steps.pip-cache.outputs.cache-hit != 'true'
       run: pip3 install jinja2
+      
     - name: Build
       run: python3 scripts/generate.py 
+      
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
