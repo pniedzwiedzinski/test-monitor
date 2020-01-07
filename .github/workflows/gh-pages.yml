@@ -25,7 +25,6 @@ jobs:
           pip
           
     - name: Install dependencies
-      if: steps.pip-cache.outputs.cache-hit != 'true'
       run: pip3 install jinja2
       
     - name: Build
