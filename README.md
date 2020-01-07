@@ -4,6 +4,10 @@ Managing the display - display the site from `current_page`
 
 ## Usage
 
+```sh
+firefox --kiosk https://pniedzwiedzinski.github.io/test-monitor
+```
+
 On the display open browser in kiosk mode and open https://pniedzwiedzinski.github.io/test-monitor
 
 To change displayed site modify the `current_page` file and after ~1 minute new site will show.
