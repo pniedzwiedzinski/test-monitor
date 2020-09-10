@@ -5,9 +5,9 @@ Managing the display - display the site from `current_page`
 ## Usage
 
 ```sh
-chrome --kiosk https://pniedzwiedzinski.github.io/test-monitor
+chrome --kiosk https://zsk-poznan.github.io/test-monitor/
 # or
-firefox --kiosk https://pniedzwiedzinski.github.io/test-monitor
+firefox --kiosk https://zsk-poznan.github.io/test-monitor/
 ```
 
 To change displayed site modify the `current_page` file and after ~1 minute new site will automatically show.
